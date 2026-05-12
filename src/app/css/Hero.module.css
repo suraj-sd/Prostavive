@@ -226,7 +226,7 @@
   }
 
   .container {
-    padding: 0 20px;
+    padding: 0 20px 0 0;
     gap: 32px;
   }
 
@@ -271,7 +271,7 @@
   }
 
   .container {
-    padding: 0 16px;
+    padding: 0 16px 0 0;
   }
 
   .heading {
