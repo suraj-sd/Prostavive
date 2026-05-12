@@ -66,9 +66,9 @@ export default function Reviews() {
       />
 
       {/* HEADER */}
-      <header className={styles.header}>
+      <header className={styles.header} id="reviews-heading">
         <h2
-          id="reviews-heading"
+         
           className={styles.heading}
         >
           ProstaVive™ Reviews
