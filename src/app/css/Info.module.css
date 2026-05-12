@@ -1,0 +1,371 @@
+/* =========================
+   COMMON SECTION
+========================= */
+
+.workSection,
+.ingredientsSection,
+.useSection,
+.benefitsSection {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.workSection,
+.ingredientsSection,
+.useSection {
+  background: #ffffff;
+  padding: 0 0 70px;
+}
+
+.benefitsSection {
+  background: #f9fafb;
+  padding: 0 0 80px;
+}
+
+/* =========================
+   TITLE BAR
+========================= */
+
+.titleBar {
+  width: 100%;
+  background: #000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 18px 16px;
+
+  margin-bottom: 50px;
+
+  box-sizing: border-box;
+}
+
+.titleBar h2 {
+  margin: 0;
+
+  width: 100%;
+  max-width: 1320px;
+
+  font-size: clamp(26px, 5vw, 48px);
+
+  font-weight: 700;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.5px;
+
+  color: #ffffff;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+  max-width: 1320px;
+
+  margin: 0 auto;
+
+  padding: 0 40px 60px;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.content {
+  width: 100%;
+}
+
+/* =========================
+   TOP / BOTTOM TEXT
+========================= */
+
+.topText,
+.bottomText {
+  margin-bottom: 28px;
+
+  font-size: clamp(16px, 2vw, 19px);
+
+  line-height: 1.9;
+
+  color: #374151;
+}
+
+/* =========================
+   INGREDIENTS LIST
+========================= */
+
+.ingredientsList {
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+.ingredientsList li {
+  position: relative;
+
+  padding-left: 34px;
+
+  margin-bottom: 18px;
+
+  font-size: clamp(15px, 2vw, 18px);
+
+  line-height: 1.9;
+
+  color: #374151;
+}
+
+.ingredientsList li::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 12px;
+
+  width: 11px;
+  height: 11px;
+
+  border-radius: 50%;
+
+  background: #16a34a;
+}
+
+.ingredientsList span {
+  font-weight: 700;
+  color: #111827;
+}
+
+/* =========================
+   BENEFITS HEADER
+========================= */
+
+.sectionHeader {
+  text-align: center;
+
+  max-width: 850px;
+
+  margin: 0 auto 55px;
+}
+
+.sectionSubtitle {
+  font-size: clamp(16px, 2vw, 18px);
+
+  line-height: 1.9;
+
+  color: #4b5563;
+}
+
+/* =========================
+   BENEFITS GRID
+========================= */
+
+.benefitsGrid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 28px;
+}
+
+/* =========================
+   BENEFIT CARD
+========================= */
+
+.benefitCard {
+  background: #ffffff;
+
+  border-radius: 22px;
+
+  padding: 34px 28px;
+
+  border: 1px solid #edf0f2;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+
+  transition: all 0.3s ease;
+
+  height: 100%;
+
+  box-sizing: border-box;
+}
+
+.benefitCard:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================
+   ICON
+========================= */
+
+.benefitIcon {
+  width: 68px;
+  height: 68px;
+
+  border-radius: 18px;
+
+  background: #ecfdf3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 32px;
+
+  margin-bottom: 22px;
+}
+
+/* =========================
+   CARD TEXT
+========================= */
+
+.benefitCard h3 {
+  margin: 0 0 14px;
+
+  font-size: clamp(20px, 2vw, 24px);
+
+  font-weight: 700;
+
+  line-height: 1.3;
+
+  color: #111827;
+}
+
+.benefitCard p {
+  margin: 0;
+
+  font-size: clamp(15px, 2vw, 17px);
+
+  line-height: 1.8;
+
+  color: #4b5563;
+}
+
+/* =========================
+   LARGE TABLET
+========================= */
+
+@media (max-width: 992px) {
+  .benefitsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .titleBar {
+    margin-bottom: 40px;
+  }
+
+  .workSection,
+  .ingredientsSection,
+  .useSection,
+  .benefitsSection {
+    padding: 0 0 65px;
+  }
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 768px) {
+  .container {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+  }
+
+  .benefitCard {
+    padding: 28px 22px;
+  }
+
+  .benefitIcon {
+    width: 62px;
+    height: 62px;
+
+    font-size: 28px;
+  }
+
+  .titleBar {
+    padding: 16px 14px;
+
+    margin-bottom: 32px;
+  }
+
+  .workSection,
+  .ingredientsSection,
+  .useSection,
+  .benefitsSection {
+    padding: 0 0 55px;
+  }
+
+  .topText,
+  .bottomText,
+  .ingredientsList li,
+  .sectionSubtitle,
+  .benefitCard p {
+    line-height: 1.8;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .container {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .titleBar {
+    padding: 14px 12px;
+  }
+
+  .titleBar h2 {
+    line-height: 1.3;
+  }
+
+  .benefitCard {
+    border-radius: 18px;
+
+    padding: 24px 18px;
+  }
+
+  .benefitIcon {
+    width: 56px;
+    height: 56px;
+
+    font-size: 24px;
+
+    margin-bottom: 18px;
+  }
+
+  .ingredientsList li {
+    padding-left: 28px;
+  }
+
+  .ingredientsList li::before {
+    width: 9px;
+    height: 9px;
+
+    top: 11px;
+  }
+
+  .workSection,
+  .ingredientsSection,
+  .useSection,
+  .benefitsSection {
+    padding: 0 0 48px;
+  }
+}

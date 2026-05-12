@@ -1,0 +1,356 @@
+/* =========================
+   CTA SECTION
+========================= */
+
+.ctaSection {
+  width: 100%;
+
+  padding: 70px 0 90px;
+
+  background: linear-gradient(
+    135deg,
+    #f8f8f8 0%,
+    #f3f0e2 100%
+  );
+
+  text-align: center;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.ctaTitleWrap {
+  width: 100%;
+
+  margin-bottom: 30px;
+
+  padding: 0 20px;
+}
+
+.ctaTitle {
+  width: 100%;
+  max-width: 980px;
+
+  margin: 0 auto;
+
+  font-size: clamp(28px, 5vw, 52px);
+
+  font-weight: 800;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.5px;
+
+  color: #111827;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.ctaImageWrap {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 30px;
+
+  padding: 0 20px;
+}
+
+.ctaImage {
+  width: 100%;
+  max-width: 520px;
+
+  height: auto;
+
+  object-fit: contain;
+
+  display: block;
+
+  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.12));
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.ctaContent {
+  width: 100%;
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  padding: 0 20px;
+}
+
+/* =========================
+   COUNTDOWN
+========================= */
+
+.countdownBox {
+  background: #fff3cd;
+
+  border: 1px solid #ffe69c;
+
+  border-radius: 14px;
+
+  padding: 14px 18px;
+
+  margin-bottom: 22px;
+}
+
+.countdownText {
+  margin: 0;
+
+  font-size: clamp(15px, 2vw, 18px);
+
+  font-weight: 700;
+
+  color: #856404;
+
+  line-height: 1.5;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.ctaSub {
+  margin-bottom: 12px;
+
+  font-size: clamp(16px, 2vw, 18px);
+
+  line-height: 1.7;
+
+  color: #374151;
+}
+
+.ctaShipping {
+  margin-bottom: 12px;
+
+  font-size: clamp(18px, 2vw, 24px);
+
+  font-weight: 800;
+
+  color: #00a650;
+
+  line-height: 1.4;
+}
+
+.ctaPrice {
+  margin-bottom: 8px;
+
+  font-size: clamp(18px, 2vw, 24px);
+
+  line-height: 1.5;
+
+  color: #111827;
+}
+
+.ctaPrice strong {
+  color: #d62828;
+}
+
+.ctaOldPrice {
+  margin-bottom: 24px;
+
+  font-size: clamp(15px, 2vw, 18px);
+
+  color: #6b7280;
+
+  text-decoration: line-through;
+}
+
+/* =========================
+   CTA BUTTON
+========================= */
+
+.ctaBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-width: 420px;
+
+  background: linear-gradient(
+    135deg,
+    #ff3b30,
+    #d92c22
+  );
+
+  color: #ffffff;
+
+  padding: 18px 24px;
+
+  border-radius: 14px;
+
+  font-size: clamp(16px, 2vw, 20px);
+
+  font-weight: 800;
+
+  text-decoration: none;
+
+  line-height: 1.4;
+
+  transition: all 0.3s ease;
+
+  box-shadow: 0 10px 25px rgba(255, 59, 48, 0.25);
+}
+
+.ctaBtn:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 16px 36px rgba(255, 59, 48, 0.35);
+}
+
+/* =========================
+   TRUST TEXT
+========================= */
+
+.trustText {
+  margin-top: 18px;
+
+  font-size: clamp(13px, 2vw, 15px);
+
+  line-height: 1.7;
+
+  color: #4b5563;
+}
+
+/* =========================
+   STICKY CTA
+========================= */
+
+.stickyCta {
+  position: fixed;
+
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+
+  background: rgba(17, 24, 39, 0.96);
+
+  backdrop-filter: blur(10px);
+
+  padding: 12px 14px;
+
+  z-index: 999;
+
+  display: none;
+
+  box-shadow: 0 -4px 18px rgba(0, 0, 0, 0.15);
+}
+
+.stickyBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+
+  background: linear-gradient(
+    135deg,
+    #ff3b30,
+    #d92c22
+  );
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  padding: 14px 18px;
+
+  border-radius: 12px;
+
+  font-size: 16px;
+  font-weight: 800;
+
+  line-height: 1.3;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+  .ctaSection {
+    padding: 60px 0 90px;
+  }
+
+  .ctaImage {
+    max-width: 450px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .ctaSection {
+    padding: 55px 0 100px;
+  }
+
+  .ctaTitleWrap {
+    margin-bottom: 24px;
+  }
+
+  .ctaImageWrap {
+    margin-bottom: 24px;
+  }
+
+  .ctaContent {
+    padding: 0 18px;
+  }
+
+  .ctaBtn {
+    padding: 16px 20px;
+  }
+
+  .stickyCta {
+    display: block;
+  }
+
+  .ctaImage {
+    max-width: 340px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .ctaSection {
+    padding: 48px 0 95px;
+  }
+
+  .ctaTitleWrap,
+  .ctaImageWrap,
+  .ctaContent {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .ctaBtn {
+    border-radius: 12px;
+  }
+
+  .countdownBox {
+    padding: 12px 14px;
+  }
+
+  .ctaImage {
+    max-width: 280px;
+  }
+
+  .trustText {
+    line-height: 1.6;
+  }
+}

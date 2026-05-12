@@ -1,0 +1,189 @@
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+  width: 100%;
+
+  background: #111827;
+
+  padding: 32px 0;
+
+  overflow: hidden;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+  width: 100%;
+  max-width: 1320px;
+
+  margin: 0 auto;
+
+  padding: 0 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  flex-wrap: wrap;
+}
+
+/* =========================
+   COPYRIGHT TEXT
+========================= */
+
+.footerText {
+  margin: 0;
+
+  font-size: clamp(13px, 2vw, 15px);
+
+  line-height: 1.7;
+
+  color: #ffffff;
+
+  text-align: center;
+}
+
+/* =========================
+   LINKS WRAPPER
+========================= */
+
+.footerLinks {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 22px;
+
+  flex-wrap: wrap;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+.footerLinks a {
+  position: relative;
+
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-size: clamp(13px, 2vw, 15px);
+
+  font-weight: 500;
+
+  line-height: 1.6;
+
+  transition:
+    color 0.3s ease,
+    opacity 0.3s ease;
+}
+
+/* underline animation */
+
+.footerLinks a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -4px;
+
+  width: 0;
+  height: 2px;
+
+  background: #22c55e;
+
+  transition: width 0.3s ease;
+}
+
+.footerLinks a:hover {
+  color: #22c55e;
+}
+
+.footerLinks a:hover::after {
+  width: 100%;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+  .container {
+    padding: 0 20px;
+  }
+
+  .footerLinks {
+    gap: 18px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 28px 0;
+  }
+
+  .container {
+    flex-direction: column;
+
+    justify-content: center;
+
+    text-align: center;
+
+    gap: 18px;
+
+    padding: 0 18px;
+  }
+
+  .footerLinks {
+    gap: 16px;
+  }
+
+  .footerLinks a {
+    padding: 4px 0;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 24px 0;
+  }
+
+  .container {
+    padding: 0 14px;
+
+    gap: 16px;
+  }
+
+  .footerLinks {
+    flex-direction: column;
+
+    gap: 12px;
+  }
+
+  .footerLinks a {
+    font-size: 14px;
+  }
+
+  .footerText {
+    font-size: 13px;
+
+    line-height: 1.6;
+  }
+}
