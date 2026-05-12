@@ -204,7 +204,7 @@
 
 @media (max-width: 768px) {
   .container {
-    padding: 0 20px 45px 0;
+    padding: 0 20px 45px;
   }
 
   .header1 {
@@ -233,6 +233,7 @@
 
   .textContent {
     gap: 20px;
+    text-align: left;
   }
 
   .textContent p {

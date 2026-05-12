@@ -30,7 +30,7 @@ export default function BonusPage() {
         
         {/* TOP LINKS */}
         <div className={styles.topLinks}>
-          <a href="#reviews" className={styles.topLink}>
+          <a href="#reviews-heading" className={styles.topLink}>
             View Reviews
           </a>
 

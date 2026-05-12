@@ -226,8 +226,13 @@
   }
 
   .container {
-    padding: 0 20px 0 0;
+    padding: 50px 20px 0 20px;
     gap: 32px;
+  }
+
+  .contentWrapper {
+    align-items: flex-start;
+    text-align: left;
   }
 
   .heading {
@@ -271,7 +276,12 @@
   }
 
   .container {
-    padding: 0 16px 0 0;
+    padding: 42px 16px 0 16px;
+  }
+
+  .contentWrapper {
+    align-items: flex-start;
+    text-align: left;
   }
 
   .heading {
