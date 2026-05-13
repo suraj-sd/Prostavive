@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://prostavive.com"),
+  metadataBase: new URL("https://prostavive360.com"),
 
   title: {
-    default: "ProstaVive™ Official Website | Prostate Health Support Supplement",
+    default:
+      "ProstaVive™ Official Website | Prostate Health Support Supplement",
     template: "%s | ProstaVive™",
   },
 
@@ -14,16 +15,45 @@ export const metadata: Metadata = {
 
   keywords: [
     "ProstaVive",
+    "ProstaVive360",
     "ProstaVive official website",
+    "buy ProstaVive",
     "ProstaVive supplement",
-    "prostate health supplement",
-    "urinary flow support",
-    "male vitality",
+    "ProstaVive reviews",
+    "ProstaVive prostate support",
+    "best prostate supplement",
     "natural prostate support",
+    "prostate health supplement",
+    "healthy prostate support",
+    "urinary flow support",
+    "bladder support for men",
+    "male vitality supplement",
+    "natural prostate formula",
+    "prostate wellness",
     "men wellness supplement",
-    "healthy prostate",
-    "urinary comfort",
-    "natural supplement",
+    "prostate care supplement",
+    "daily prostate support",
+    "advanced prostate formula",
+    "prostate balance support",
+    "support healthy urinary flow",
+    "men over 40 supplement",
+    "support bladder comfort",
+    "natural male support",
+    "herbal prostate supplement",
+    "premium prostate formula",
+    "prostate nutrition support",
+    "support urinary comfort",
+    "prostate vitality formula",
+    "men health support",
+    "natural wellness supplement",
+    "healthy aging men support",
+    "support prostate function",
+    "male wellness formula",
+    "support frequent urination",
+    "nighttime urinary support",
+    "prostate support capsules",
+    "daily men support supplement",
+    "natural health formula",
   ],
 
   authors: [
@@ -52,7 +82,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: "https://prostavive.com",
+    canonical: "https://prostavive360.com",
   },
 
   category: "health",
@@ -60,14 +90,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
 
-    url: "https://prostavive.com",
+    url: "https://prostavive360.com",
 
     siteName: "ProstaVive™",
 
     locale: "en_US",
 
-    title:
-      "ProstaVive™ Official Website | Natural Prostate Health Support",
+    title: "ProstaVive™ Official Website | Natural Prostate Health Support",
 
     description:
       "Support prostate wellness, urinary flow, and male vitality naturally with ProstaVive™ daily formula.",
@@ -85,8 +114,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title:
-      "ProstaVive™ Official Website | Natural Prostate Health Support",
+    title: "ProstaVive™ Official Website | Natural Prostate Health Support",
 
     description:
       "Support prostate wellness, urinary flow, and male vitality naturally with ProstaVive™.",
@@ -122,9 +150,7 @@ export default function RootLayout({
 
               name: "ProstaVive™",
 
-              image: [
-                "https://prostavive.com/prostavive-1-bottle.webp",
-              ],
+              image: ["https://prostavive360.com/prostavive-1-bottle.webp"],
 
               description:
                 "Natural prostate support supplement designed to support urinary flow, prostate wellness, and male vitality.",
@@ -143,14 +169,13 @@ export default function RootLayout({
               offers: {
                 "@type": "Offer",
 
-                url: "https://prostavive.com",
+                url: "https://prostavive360.com",
 
                 priceCurrency: "USD",
 
                 price: "39",
 
-                availability:
-                  "https://schema.org/InStock",
+                availability: "https://schema.org/InStock",
               },
             }),
           }}
@@ -159,3 +184,8 @@ export default function RootLayout({
     </html>
   );
 }
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};

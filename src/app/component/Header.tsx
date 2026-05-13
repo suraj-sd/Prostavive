@@ -76,7 +76,7 @@ export default function Header() {
 
             {/* MOBILE BUTTON */}
             <li className={styles.mobileBtnWrap}>
-              <a href="#ordering" className={styles.orderBtn}
+              <a href="#order" className={styles.orderBtn}
                 onClick={() => {
                   const checkbox = document.getElementById('menu-toggle') as HTMLInputElement;
                   if (checkbox) checkbox.checked = false;
@@ -90,7 +90,7 @@ export default function Header() {
 
         {/* DESKTOP BUTTON */}
         <div className={styles.desktopBtn}>
-          <a href="#ordering" className={styles.orderBtn}>
+          <a href="#order" className={styles.orderBtn}>
             ORDER NOW
           </a>
         </div>
