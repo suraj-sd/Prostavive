@@ -1,64 +1,30 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://prostavive360.com"),
 
   title: {
-    default:
-      "ProstaVive™ Official Website | Prostate Health Support Supplement",
+    default: "ProstaVive™ Official Website",
     template: "%s | ProstaVive™",
   },
 
   description:
-    "ProstaVive™ is a natural prostate health supplement designed to support urinary flow, bladder comfort, male vitality, and overall wellness using carefully selected natural ingredients.",
+    "ProstaVive™ is a natural prostate health support supplement designed to help support urinary flow, bladder comfort, and male wellness.",
 
   keywords: [
     "ProstaVive",
-    "ProstaVive360",
     "ProstaVive official website",
-    "buy ProstaVive",
     "ProstaVive supplement",
-    "ProstaVive reviews",
-    "ProstaVive prostate support",
-    "best prostate supplement",
+    "prostate health support",
     "natural prostate support",
-    "prostate health supplement",
-    "healthy prostate support",
-    "urinary flow support",
-    "bladder support for men",
-    "male vitality supplement",
-    "natural prostate formula",
-    "prostate wellness",
-    "men wellness supplement",
-    "prostate care supplement",
-    "daily prostate support",
-    "advanced prostate formula",
-    "prostate balance support",
-    "support healthy urinary flow",
-    "men over 40 supplement",
-    "support bladder comfort",
-    "natural male support",
-    "herbal prostate supplement",
-    "premium prostate formula",
-    "prostate nutrition support",
-    "support urinary comfort",
-    "prostate vitality formula",
-    "men health support",
-    "natural wellness supplement",
-    "healthy aging men support",
-    "support prostate function",
-    "male wellness formula",
-    "support frequent urination",
-    "nighttime urinary support",
-    "prostate support capsules",
-    "daily men support supplement",
-    "natural health formula",
+    "male wellness supplement",
   ],
 
   authors: [
     {
       name: "ProstaVive",
+      url: "https://prostavive360.com",
     },
   ],
 
@@ -66,26 +32,24 @@ export const metadata: Metadata = {
 
   publisher: "ProstaVive",
 
-  robots: {
-    index: true,
-    follow: true,
-    nocache: false,
-
-    googleBot: {
-      index: true,
-      follow: true,
-      noimageindex: false,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-
   alternates: {
     canonical: "https://prostavive360.com",
   },
 
   category: "health",
+
+  robots: {
+    index: true,
+    follow: true,
+
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 
   openGraph: {
     type: "website",
@@ -94,19 +58,19 @@ export const metadata: Metadata = {
 
     siteName: "ProstaVive™",
 
-    locale: "en_US",
-
-    title: "ProstaVive™ Official Website | Natural Prostate Health Support",
+    title: "ProstaVive™ Official Website",
 
     description:
-      "Support prostate wellness, urinary flow, and male vitality naturally with ProstaVive™ daily formula.",
+      "Support prostate wellness, urinary flow, and male vitality naturally with ProstaVive™.",
+
+    locale: "en_US",
 
     images: [
       {
-        url: "/prostavive-1-bottle.webp",
+        url: "https://prostavive360.com/prostavive-1-bottle.webp",
         width: 1200,
         height: 630,
-        alt: "ProstaVive™ prostate support supplement bottle",
+        alt: "ProstaVive™ Bottle",
       },
     ],
   },
@@ -114,12 +78,14 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: "ProstaVive™ Official Website | Natural Prostate Health Support",
+    title: "ProstaVive™ Official Website",
 
     description:
-      "Support prostate wellness, urinary flow, and male vitality naturally with ProstaVive™.",
+      "Natural prostate wellness support supplement for men.",
 
-    images: ["/prostavive-1-bottle.webp"],
+    images: [
+      "https://prostavive360.com/prostavive-1-bottle.webp",
+    ],
   },
 
   icons: {
@@ -127,65 +93,109 @@ export const metadata: Metadata = {
     shortcut: "/favicon.ico",
     apple: "/favicon.ico",
   },
+
+  verification: {
+    // Replace with real code from Google Search Console
+    google: "google-site-verification-code",
+  },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  themeColor: "#ffffff",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body>
         {children}
 
-        {/* SEO STRUCTURED DATA */}
+        {/* ORGANIZATION + WEBSITE + PRODUCT SCHEMA */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
 
-              "@type": "Product",
+                "@type": "Organization",
 
-              name: "ProstaVive™",
-
-              image: ["https://prostavive360.com/prostavive-1-bottle.webp"],
-
-              description:
-                "Natural prostate support supplement designed to support urinary flow, prostate wellness, and male vitality.",
-
-              brand: {
-                "@type": "Brand",
                 name: "ProstaVive",
-              },
-
-              aggregateRating: {
-                "@type": "AggregateRating",
-                ratingValue: "5",
-                reviewCount: "5795",
-              },
-
-              offers: {
-                "@type": "Offer",
 
                 url: "https://prostavive360.com",
 
-                priceCurrency: "USD",
+                logo:
+                  "https://prostavive360.com/favicon.ico",
 
-                price: "39",
-
-                availability: "https://schema.org/InStock",
+                sameAs: [
+                  "https://facebook.com/",
+                  "https://instagram.com/",
+                  "https://twitter.com/",
+                ],
               },
-            }),
+
+              {
+                "@context": "https://schema.org",
+
+                "@type": "WebSite",
+
+                name: "ProstaVive",
+
+                url: "https://prostavive360.com",
+
+                potentialAction: {
+                  "@type": "SearchAction",
+
+                  target:
+                    "https://prostavive360.com/?s={search_term_string}",
+
+                  "query-input":
+                    "required name=search_term_string",
+                },
+              },
+
+              {
+                "@context": "https://schema.org",
+
+                "@type": "Product",
+
+                name: "ProstaVive",
+
+                image: [
+                  "https://prostavive360.com/prostavive-1-bottle.webp",
+                ],
+
+                description:
+                  "Natural prostate support supplement designed to support urinary flow and male wellness.",
+
+                brand: {
+                  "@type": "Brand",
+                  name: "ProstaVive",
+                },
+
+                offers: {
+                  "@type": "Offer",
+
+                  url: "https://prostavive360.com",
+
+                  priceCurrency: "USD",
+
+                  price: "39",
+
+                  availability:
+                    "https://schema.org/InStock",
+                },
+              },
+            ]),
           }}
         />
       </body>
     </html>
   );
 }
-
-export const viewport = {
-  width: "device-width",
-  initialScale: 1,
-};
