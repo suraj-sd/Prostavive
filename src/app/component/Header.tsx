@@ -1,23 +1,22 @@
-"use client";
-
+import Link from "next/link";
 import styles from "../css/Header.module.css";
 
 const navItems = [
   {
     label: "About",
-    href: "hero2",
+    href: "/about",
   },
   {
     label: "Benefits",
-    href: "benefits",
+    href: "/benefits",
   },
   {
     label: "Ingredients",
-    href: "ingredients",
+    href: "/ingredients",
   },
   {
     label: "FAQs",
-    href: "faqs",
+    href: "/faq",
   },
 ];
 
@@ -25,24 +24,19 @@ export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        
-        {/* LOGO */}
-        <a
-          href="#top"
-          className={styles.logo}
-          aria-label="Go to ProstaVive Home Page"
-        >
-          <span>Prosta</span>Vive™
-        </a>
 
-        {/* HIDDEN CHECKBOX */}
+        {/* LOGO */}
+        <Link href="/" className={styles.logo}>
+          <span>Prosta</span>Vive™
+        </Link>
+
+        {/* MOBILE MENU (CSS ONLY TOGGLE) */}
         <input
           type="checkbox"
           id="menu-toggle"
           className={styles.menuToggle}
         />
 
-        {/* HAMBURGER */}
         <label
           htmlFor="menu-toggle"
           className={styles.menuButton}
@@ -54,46 +48,35 @@ export default function Header() {
         </label>
 
         {/* NAVIGATION */}
-        <nav
-          className={styles.navigation}
-          aria-label="Primary Navigation"
-        >
+        <nav className={styles.navigation} aria-label="Primary Navigation">
           <ul className={styles.navList}>
             {navItems.map((item) => (
               <li key={item.label}>
-                <a
-                  href={`#${item.href}`}
+                <Link
+                  href={item.href}
                   className={styles.navLink}
-                  onClick={() => {
-                    const checkbox = document.getElementById('menu-toggle') as HTMLInputElement;
-                    if (checkbox) checkbox.checked = false;
-                  }}
                 >
                   {item.label}
-                </a>
+                </Link>
               </li>
             ))}
 
-            {/* MOBILE BUTTON */}
+            {/* MOBILE CTA */}
             <li className={styles.mobileBtnWrap}>
-              <a href="#order" className={styles.orderBtn}
-                onClick={() => {
-                  const checkbox = document.getElementById('menu-toggle') as HTMLInputElement;
-                  if (checkbox) checkbox.checked = false;
-                }}
-              >
+              <Link href="/#order" className={styles.orderBtn}>
                 ORDER NOW
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
 
-        {/* DESKTOP BUTTON */}
+        {/* DESKTOP CTA */}
         <div className={styles.desktopBtn}>
-          <a href="#order" className={styles.orderBtn}>
+          <Link href="/#order" className={styles.orderBtn}>
             ORDER NOW
-          </a>
+          </Link>
         </div>
+
       </div>
     </header>
   );

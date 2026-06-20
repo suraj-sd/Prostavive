@@ -3,16 +3,16 @@ import styles from "../css/Hero2.module.css";
 
 export default function Detail() {
   return (
-    <section
+    <section id="about"
       className={styles.detailSection}
-      aria-labelledby="prostavive-info-heading"
+      aria-labelledby="prostavive-info-heading" 
     >
       <header className={styles.header1}>
         <h2 id="prostavive-info-heading" className={styles.heading1}>
           100% Satisfaction • 180-Day Money Back Guarantee
         </h2>
       </header>
-      <header id="hero2" className={styles.header}>
+      <header  className={styles.header}>
         <h2 id="what-is-prostavive" className={styles.heading}>
           What is ProstaVive™?
         </h2>
