@@ -29,7 +29,6 @@ export default function HomePage() {
                 "@id": "https://prostavive360.com/#organization",
                 name: "ProstaVive",
                 url: "https://prostavive360.com/",
-                logo: "https://prostavive360.com/prostavive-1-bottle.webp",
               },
               {
                 "@type": "WebSite",
@@ -42,11 +41,11 @@ export default function HomePage() {
                 "@type": "WebPage",
                 "@id": "https://prostavive360.com/#webpage",
                 url: "https://prostavive360.com/",
-                name: "ProstaVive Official Website | Prostate Health Support",
+                name: "ProstaVive Supplement | Ingredients & FAQs",
                 isPartOf: { "@id": "https://prostavive360.com/#website" },
                 about: { "@id": "https://prostavive360.com/#product" },
                 description:
-                  "Official ProstaVive website with product information, ingredients, reviews, FAQs, and ordering details.",
+                  "Explore ProstaVive supplement ingredients, product details, FAQs, and ordering information. Review the current offer and learn what the formula contains.",
               },
               {
                 "@type": "Product",
@@ -54,60 +53,9 @@ export default function HomePage() {
                 name: "ProstaVive",
                 image: "https://prostavive360.com/prostavive-1-bottle.webp",
                 description:
-                  "Natural dietary supplement in powder form designed to support prostate health and urinary wellness.",
+                  "Dietary supplement sold under the ProstaVive name. See this page for product details, ingredients, and ordering information.",
+                category: "Dietary supplement",
                 brand: { "@type": "Brand", name: "ProstaVive" },
-                offers: {
-                  "@type": "Offer",
-                  price: "39",
-                  priceCurrency: "USD",
-                  availability: "https://schema.org/InStock",
-                  url: "https://7e0c0p1olihhz97o1h54758p81.hop.clickbank.net",
-                },
-              },
-              {
-                "@type": "FAQPage",
-                mainEntity: [
-                  {
-                    "@type": "Question",
-                    name: "What is ProstaVive?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "ProstaVive is a natural dietary supplement in powder form designed to support prostate health.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "When can I expect to see results with ProstaVive?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "Results vary, but many users notice improvements within a few weeks.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Are there any side effects of ProstaVive?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "ProstaVive is made from natural ingredients and is generally well-tolerated.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "Is ProstaVive safe for me to take?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "ProstaVive contains natural ingredients. Consult a healthcare professional before use if you have a medical condition, take medication, or are pregnant or nursing.",
-                    },
-                  },
-                  {
-                    "@type": "Question",
-                    name: "How will ProstaVive be shipped to me and how quickly?",
-                    acceptedAnswer: {
-                      "@type": "Answer",
-                      text: "Shipping takes 5–7 business days in the US and Canada and 8–15 days internationally.",
-                    },
-                  },
-                ],
               },
             ],
           }),

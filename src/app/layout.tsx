@@ -5,22 +5,12 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://prostavive360.com"),
 
   title: {
-    default: "ProstaVive Official Website | Prostate Health Support",
+    default: "ProstaVive Supplement | Ingredients & FAQs",
     template: "%s | ProstaVive",
   },
 
   description:
-    "Visit the official ProstaVive website to learn about its natural prostate support formula, ingredients, urinary wellness information, and current offer.",
-
-  keywords: [
-    "ProstaVive official website",
-    "ProstaVive supplement",
-    "ProstaVive reviews",
-    "prostate health",
-    "natural prostate support",
-    "urinary wellness",
-    "male vitality",
-  ],
+    "Explore ProstaVive supplement ingredients, product details, FAQs, and ordering information. Review the current offer and learn what the formula contains.",
 
   applicationName: "ProstaVive",
   authors: [{ name: "ProstaVive" }],
@@ -30,6 +20,12 @@ export const metadata: Metadata = {
 
   alternates: {
     canonical: "/",
+  },
+
+  verification: {
+    other: {
+      "msvalidate.01": "7110F26BD135CDAA28B93D262A945D29",
+    },
   },
 
   robots: {
@@ -48,9 +44,9 @@ export const metadata: Metadata = {
     type: "website",
     url: "/",
     siteName: "ProstaVive",
-    title: "ProstaVive Official Website | Prostate Health Support",
+    title: "ProstaVive Supplement | Ingredients & FAQs",
     description:
-      "Learn about ProstaVive, its natural ingredients, prostate support benefits, and current offer.",
+      "Explore ProstaVive supplement ingredients, product details, FAQs, and ordering information. Review the current offer and learn what the formula contains.",
     images: [
       {
         url: "/prostavive-1-bottle.webp",
@@ -63,9 +59,9 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "ProstaVive Official Website | Prostate Health Support",
+    title: "ProstaVive Supplement | Ingredients & FAQs",
     description:
-      "Learn about ProstaVive ingredients, prostate support information, and the current offer.",
+      "Explore ProstaVive supplement ingredients, product details, FAQs, and ordering information. Review the current offer and learn what the formula contains.",
     images: ["/prostavive-1-bottle.webp"],
   },
 
@@ -88,13 +84,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <meta
-          name="msvalidate.01"
-          content="7110F26BD135CDAA28B93D262A945D29"
-        />
-      </head>
-
       <body>{children}</body>
     </html>
   );
