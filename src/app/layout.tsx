@@ -1,4 +1,3 @@
-
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
@@ -26,7 +25,6 @@ export const metadata: Metadata = {
   verification: {
     other: {
       "msvalidate.01": "7110F26BD135CDAA28B93D262A945D29",
-      monetag: "0e4b7ad5b356301c0cb57e64d91b7e5c",
     },
   },
 
@@ -70,6 +68,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.ico",
   },
+
 };
 
 export const viewport: Viewport = {
@@ -85,22 +84,23 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
-        {children}
-
+      <head>
+        <meta name="monetag" content="aa62e7c6dd69edf0839a643e9e4d3bf1" />
         <script
           dangerouslySetInnerHTML={{
             __html: `
-              self.options = {
-                domain: "3nbf4.com",
-                zoneId: 12019351,
-              };
-              self.lary = "";
-              importScripts("https://3nbf4.com/act/files/service-worker.min.js?r=sw");
+              if ("serviceWorker" in navigator) {
+                window.addEventListener("load", function () {
+                  navigator.serviceWorker.register("/sw.js").catch(function (error) {
+                    console.error("Service worker registration failed:", error);
+                  });
+                });
+              }
             `,
           }}
         />
-      </body>
+      </head>
+      <body>{children}</body>
     </html>
   );
 }
