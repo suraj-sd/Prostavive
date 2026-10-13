@@ -83,21 +83,26 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              self.options = {
-              domain: "3nbf4.com",
-              zoneId: 12019351,
-              };
-              self.lary = "";
-              importScripts("https://3nbf4.com/act/files/service-worker.min.js?r=sw");
-            `,
-          }}
-        />
-      </head>
+<html lang="en">
+  <head>
+    <meta
+      name="monetag"
+      content="0e4b7ad5b356301c0cb57e64d91b7e5c"
+    />
+
+    <script
+      dangerouslySetInnerHTML={{
+        __html: `
+          self.options = {
+            domain: "3nbf4.com",
+            zoneId: 12019351,
+          };
+          self.lary = "";
+          importScripts("https://3nbf4.com/act/files/service-worker.min.js?r=sw");
+        `,
+      }}
+    />
+  </head>
       <body>{children}</body>
     </html>
   );
